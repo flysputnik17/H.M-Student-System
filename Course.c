@@ -4,6 +4,7 @@
 #include"Course.h"
 
 
+
 Course* Add_course(int id, char* name, Course* head)
 {
     printf("Add new course\n");

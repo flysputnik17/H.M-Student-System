@@ -7,7 +7,8 @@
 
 
 
-Student* Add_student(int id, char* name, int num_courses, CourseGrade* grades, Course* course_name, Student* head);
+
+Student* Add_student(int id, char* name, int num_courses, CourseGrade* grades, Course* course_name, Student* head)
 {
     printf("Enter Student name: ");
     char buffer[100];

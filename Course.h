@@ -7,7 +7,7 @@
 
 
 
-typedef struct {
+typedef struct Course{
     int id;
     char *name;
     struct Course *next;

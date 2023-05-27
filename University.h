@@ -6,21 +6,21 @@
 #include"Course.h"
 
 
-typedef struct {
+typedef struct University{
     char *name;
     int num_courses;
     Course *courses;
     Student *students;
 }University;
 
-typedef struct {
+typedef struct CourseGrade{
     int course_id;
     struct Course* currentCourse;
     float grade;
     struct CourseGrade* next;
 }CourseGrade;
 
-typedef struct {
+typedef struct Student{
     int id;
     char *name;
     int num_courses;
