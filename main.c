@@ -1,16 +1,8 @@
 #include<stdio.h>
 #include <string.h>
 #include<stdlib.h>
-#include"Student.h"
-#include"CourseGrade.h"
-
-typedef struct {
-    int id;
-    char *name;
-    struct Course* next;
-} Course;
-
-
+#include"Course.h"
+#include"University.h"
 
 
 
@@ -19,6 +11,7 @@ typedef struct {
 
 int main()
 {
+    loop:
     printf("Welcome to the University Management System!\nPlease select an option: ");
     printf("1. Add a student\n");
     printf("2. Remove a student\n");
@@ -32,6 +25,68 @@ int main()
     printf("10. Quit\n");
     int user_menu_input = 0;
     scanf("%d",&user_menu_input);
+
+    while (user_menu_input != 10)
+    {
+        switch (user_menu_input)
+        {
+        case 1:
+        Student* Add_student(int id, char* name, int num_courses, CourseGrade* grades, Course* course_name, Student* head);
+        goto loop;
+        break;
+
+        case 2:
+        Student* remove_student(int id, Student* head);
+        goto loop;
+        break;
+
+        case 3:
+        Student* edit_student(int id, Student* head);
+        goto loop;
+        break;
+
+        case 4:
+        void Print_students(University* university);
+        goto loop;
+        break;
+
+        case 5:
+        Course* Add_course(int id, char* name, Course* head);
+        goto loop;
+        break;
+
+        case 6:
+        Course* Delete_course(int id, char* name, Course* head);
+        goto loop;
+        break;
+
+        case 7:
+        void Edit_course(int id, Course* head);
+        goto loop;
+        break;
+
+        case 8:
+        void Print_courses(Course* head);
+        goto loop;
+        break;
+
+        case 9:
+        void Calculate_average_score(University* university);
+        goto loop;
+        break;
+
+        }
+    }
+
+    void Exit_system();
+    
+    
     return 0;
 
 }
+
+
+
+
+
+
